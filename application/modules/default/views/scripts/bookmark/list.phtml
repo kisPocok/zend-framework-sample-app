@@ -1,0 +1,15 @@
+<h1>Bookmark list</h1>
+<?php
+if ($this->data instanceof Zend_Db_Table_Rowset and $this->data->count() > 0): ?>
+    <ul>
+    <?php foreach ($this->data as $item): ?>
+        <li>
+        	<a href="<?php echo $item->url; ?>" target="_blank"><?php echo $item->title; ?> <small>(<?php echo $item->url; ?>)</small></a> - 
+        	<a href="/bookmark/edit/<?php echo $item->id; ?>">edit</a>,
+        	<a href="/bookmark/delete/<?php echo $item->id; ?>">del</a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+<?php else: ?>
+    <p><a href="/bookmark/add">Upload your first bookmark</a></p>
+<?php endif; ?>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<?php echo $this->headTitle() ?>
+<?php echo $this->headScript() ?>
+<?php echo $this->headStyle() ?>
+
+<style>
+body { color:#282828; font-family:Helvetica, Verdana, Georgia, Arial; font-size:13px; }
+a { color: #4986E7; text-decoration:none; font-size:1em; }
+a:hover { text-decoration:underline; }
+form { margin-bottom:2em; }
+</style>
+</head>
+<body>
+<?php echo $this->layout()->content; ?>
+<footer>
+    <a href="/bookmark">List</a>, 
+    <a href="/bookmark/add">Add bookmark</a>
+</footer>
+</body>
+</html>

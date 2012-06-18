@@ -1,0 +1,8 @@
+<h1><?php echo (isset($this->id) and $this->id > 0) ? 'Edit' : 'Create'; ?> bookmark</h1>
+
+<form action="<?php echo $this->form->getAction(); ?>" method="<?php echo $this->form->getMethod(); ?>">
+	<?php echo $this->form->title; ?>
+	<?php echo $this->form->url; ?>
+	<?php echo $this->form->submit; ?>
+	<?php echo $this->form->token; ?>
+</form>
